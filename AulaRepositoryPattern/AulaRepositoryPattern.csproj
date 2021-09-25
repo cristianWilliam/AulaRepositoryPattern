@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="WeatherForecast.cs" />
+      <Compile Remove="Controllers\WeatherForecastController.cs" />
+      <Compile Remove="ModelsRequest\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AulaRepositoryPattern.Data\AulaRepositoryPattern.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ModelsRequest\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="ModelsRequest\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="ModelsRequest\**" />
+    </ItemGroup>
+
+</Project>
